@@ -9,8 +9,7 @@ public class Calculator : ICalculator
     {
         if (b == 0)
         {
-            Console.WriteLine("Kan ikke dele på null");
-            throw new Exception("Program avsluttet!");
+            throw new DivideByZeroException("Kan ikke dele på null.");
         }
         return a / b;
     }
